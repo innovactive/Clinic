@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+<class name="com.innovative.klinika.bean.PatientBean" table="patient">
+	<id name ="patientID">
+	<generator class="autoincrement"></generator>
+	</id>
+	<properties name="name"></properties>
+	<properties name="surname"></properties>
+	<properties name="birthday"></properties>
+	<properties name="personalCode"></properties>
+	<properties name="phone"></properties>
+	<properties name="country"></properties>
+	<properties name="email"></properties>
+	<properties name="gender"></properties>
+	<properties name="regDate"></properties>
+	
+	
+</class>
+
+</hibernate-mapping>
+ 
+ 
