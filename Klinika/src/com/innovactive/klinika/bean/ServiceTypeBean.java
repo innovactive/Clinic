@@ -1,4 +1,4 @@
-package com.innovactive.klinika.model.bean;
+package com.innovactive.klinika.bean;
 
 public class ServiceTypeBean {
 	
