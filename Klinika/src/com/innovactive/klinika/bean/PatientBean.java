@@ -10,7 +10,7 @@ import java.util.Date;
  *
  */
 public class PatientBean {
-	private int patientID;
+	private int idpatient;
 	private String name;
 	private String surname;
 	private Date birthday;
@@ -23,10 +23,10 @@ public class PatientBean {
 	
 	
 	public int getPatientID() {
-		return patientID;
+		return idpatient;
 	}
 	public void setPatientID(int patientID) {
-		this.patientID = patientID;
+		this.idpatient = patientID;
 	}
 	public String getName() {
 		return name;

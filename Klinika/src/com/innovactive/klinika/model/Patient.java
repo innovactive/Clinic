@@ -13,35 +13,45 @@ import javax.persistence.Table;
 @Table(name="Patient")
 public class Patient implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "idpatient") 
-	private int patientIdentifier;
+	private int patientid;
 	
 	@Column(name = "name")
 	private String patientName;
+	
 	@Column(name = "surname")
 	private String patientSurname;
+	
 	@Column(name = "birthday")
 	private Date patientBirthday;
+	
 	@Column(name= "personalCode")
 	private String patientPersonalCode; //carta e identiteti
+	
 	@Column(name = "phone")
 	private String patientPhone;
+	
 	@Column(name = "country")
 	private String patientCountry;
+	
 	@Column(name ="email")
 	private String patientEmail;
+	
 	@Column(name = "gender")
 	private String patientGender;
+	
 	@Column(name="regDate")
 	private Date patientRegDate;
 	
-	public int getPatientIdentifier() {
-		return patientIdentifier;
+	public int getPatientId() {
+		return patientid;
 	}
-	public void setPatientIdentifier(int patientIdentifier) {
-		this.patientIdentifier = patientIdentifier;
+	public void setPatientId(int patientId) {
+		this.patientid = patientId;
 	}
 	public String getPatientName() {
 		return patientName;

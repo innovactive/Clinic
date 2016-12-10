@@ -35,7 +35,7 @@ public class Servlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		try {
-			patientDao.find(2);
+			patientDao.findPatient(2);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
