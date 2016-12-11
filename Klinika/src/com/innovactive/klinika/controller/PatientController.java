@@ -38,7 +38,7 @@ public class PatientController {
 		Map<String, Object> model = new HashMap<String, Object>();
 		model.put("patients", prepareListOfPatientsBeen(patientService.findAllPatients()));
 		
-		return null;
+		return new ModelAndView("addPatient", model);
 		
 	}
 	
@@ -50,6 +50,11 @@ public class PatientController {
 		patients.put("patients", prepareListOfPatientsBeen(patientService.findAllPatients()));
 		return new ModelAndView("patientsList", patients);
 	}
+	
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	public ModelAndView welcome() {
+		return new ModelAndView("index");
+	}
 
 
 	private List<PatientBean> prepareListOfPatientsBeen(List<Patient> patients) {
@@ -59,36 +64,37 @@ public class PatientController {
 			PatientBean patientB = null;
 			for(Patient patient: patients){
 				patientB = new PatientBean();
-				patientB.setBirthday(patient.getPatientBirthday());
+				//patientB.setBirthday(patient.getPatientBirthday());
 				patientB.setCountry(patient.getPatientCountry());
 				patientB.setEmail(patient.getPatientEmail());
 				patientB.setGender(patient.getPatientGender());
 				patientB.setName(patient.getPatientName());
-				patientB.setPatientID(patient.getPatientId());
+				patientB.setIdpatient(patient.getPatientId());
 				patientB.setPersonalCode(patient.getPatientPersonaCode());
 				patientB.setPhone(patient.getPatientPhone());
-				patientB.setRegDate(patient.getPatientRegDate());
+				//patientB.setRegDate(patient.getPatientRegDate());
 				patientB.setSurname(patient.getPatientSurname());
 				patientsBean.add(patientB); //riempimento della ArrayList
 				
 			}
 		}
 		
-		return null;
+		return patientsBean;
 	}
 
 
 	private Patient prepareModel(PatientBean patientBean) {
 		Patient patient = new Patient();
 		patient.setPatientName(patientBean.getName());
-		patient.setPatientBirthday(patientBean.getBirthday());
+		//patient.setPatientBirthday(patientBean.getBirthday());
 		patient.setPatientCountry(patientBean.getCountry());
 		patient.setPatientGender(patientBean.getGender());
 		patient.setPatientPersonaCode(patientBean.getPersonalCode());
 		patient.setPatientEmail(patientBean.getEmail());
 		patient.setPatientSurname(patientBean.getSurname());
 		patient.setPatientPhone(patientBean.getPhone());
-		patient.setPatientRegDate(patientBean.getRegDate());
+		//patient.setPatientRegDate(patientBean.getRegDate());
+		patientBean.setIdpatient(0);;
 		return patient;
 	}
 	

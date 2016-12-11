@@ -10,21 +10,21 @@
 </head>
 <body>
 	<h2>Add Employee Data</h2>
-	<form:form method="POST" action="/list/save.html">
+	<form:form method="POST" action="save.html">
 		<table>
 			<tr>
 				<td><form:label path="idpatient">Patient ID:</form:label></td>
-				<td><form:input path="idpatient" value="${patient.id}"
+				<td><form:input path="idpatient" value="${patient.idpatient}"
 						readonly="true" /></td>
 			</tr>
 			<tr>
 				<td><form:label path="name">Patient Name:</form:label></td>
 				<td><form:input path="name" value="${patient.name}" /></td>
 			</tr>
-			<tr>
+			<!-- tr>
 				<td><form:label path="birthday">Patient Birthday:</form:label></td>
 				<td><form:input path="birthday" value="${patient.birthday}" /></td>
-			</tr>
+			</tr-->
 			<tr>
 				<td><form:label path="country">Patient Country:</form:label></td>
 				<td><form:input path="country" value="${patient.country}" /></td>

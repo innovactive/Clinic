@@ -16,6 +16,10 @@
 	<classpathentry kind="lib" path="C:/Users/Kliti/Desktop/spring-framework-4.3.3.RELEASE/libs/spring-jdbc-4.3.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Kliti/Desktop/spring-framework-4.3.3.RELEASE/libs/spring-orm-4.3.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Kliti/Desktop/spring-framework-4.3.3.RELEASE/libs/spring-web-4.3.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Kliti/Desktop/spring-framework-4.3.3.RELEASE/libs/spring-webmvc-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kliti/Desktop/spring-framework-4.3.3.RELEASE/libs/spring-webmvc-4.3.3.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

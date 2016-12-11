@@ -20,13 +20,11 @@ public class PatientBean {
 	private String email;
 	private String gender;
 	private Date regDate;
-	
-	
-	public int getPatientID() {
+	public int getIdpatient() {
 		return idpatient;
 	}
-	public void setPatientID(int patientID) {
-		this.idpatient = patientID;
+	public void setIdpatient(int idpatient) {
+		this.idpatient = idpatient;
 	}
 	public String getName() {
 		return name;
