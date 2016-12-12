@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Add Employee Data</h2>
+	<h2>Add patient</h2>
 	<form:form method="POST" action="save.html">
 		<table>
 			<tr>
@@ -21,10 +21,11 @@
 				<td><form:label path="name">Patient Name:</form:label></td>
 				<td><form:input path="name" value="${patient.name}" /></td>
 			</tr>
-			<!-- tr>
+			<tr>	
 				<td><form:label path="birthday">Patient Birthday:</form:label></td>
-				<td><form:input path="birthday" value="${patient.birthday}" /></td>
-			</tr-->
+				<td></td>
+			</tr>
+	
 			<tr>
 				<td><form:label path="country">Patient Country:</form:label></td>
 				<td><form:input path="country" value="${patient.country}" /></td>
@@ -41,26 +42,27 @@
 	</form:form>
 
 	<c:if test="${!empty patients}">
-		<h2>List Employees</h2>
+		<h2>Patients List</h2>
 		<table align="left" border="1">
 			<tr>
-				<th>Employee ID</th>
-				<th>Employee Name</th>
-				<th>Employee Age</th>
-				<th>Employee Salary</th>
-				<th>Employee Address</th>
+				<th>Patient ID</th>
+				<th>Patient Name</th>
+				<th>Patient Birthday</th>
+				<th>Patient Country</th>
+				<th>Patient Email</th>
 				<th>Actions on Row</th>
 			</tr>
 
-			<c:forEach items="${employees}" var="employee">
+			<c:forEach items="${patients}" var="patient">
 				<tr>
-					<td><c:out value="${employee.idpatient}" /></td>
-					<td><c:out value="${employee.name}" /></td>
-					<td><c:out value="${employee.birthay}" /></td>
-					<td><c:out value="${employee.country}" /></td>
-					<td><c:out value="${employee.email}" /></td>
-					<td align="center"><a href="edit.html?id=${employee.idpatient}">Edit</a>
-						| <a href="delete.html?id=${employee.id}">Delete</a></td>
+					<td><c:out value="${patient.idpatient}" /></td>
+					<td><c:out value="${patient.name}" /></td>
+					<td><c:out value="${patient.birthday}" /></td>
+					<td><c:out value="${patient.country}" /></td>
+					<td><c:out value="${patient.email}" /></td>
+					<td align="center">
+						<a href="edit.html?id=${patient.idpatient}">Edit</a>
+						<a href="delete.html?id=${patient.idpatient}">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>

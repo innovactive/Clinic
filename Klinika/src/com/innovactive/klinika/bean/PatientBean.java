@@ -14,12 +14,13 @@ public class PatientBean {
 	private String name;
 	private String surname;
 	private Date birthday;
-	private String personalCode; //carta e identiteti
+	private String idCardCode; //carta e identiteti
 	private String phone;
 	private String country;
 	private String email;
 	private String gender;
 	private Date regDate;
+	
 	public int getIdpatient() {
 		return idpatient;
 	}
@@ -44,11 +45,11 @@ public class PatientBean {
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
-	public String getPersonalCode() {
-		return personalCode;
+	public String getIdCardCode() {
+		return idCardCode;
 	}
-	public void setPersonalCode(String personalCode) {
-		this.personalCode = personalCode;
+	public void setIdCardCode(String idCardCode) {
+		this.idCardCode = idCardCode;
 	}
 	public String getPhone() {
 		return phone;

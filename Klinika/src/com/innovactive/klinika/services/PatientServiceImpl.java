@@ -20,7 +20,6 @@ public class PatientServiceImpl implements PatientService {
 
 	@Override
 	public void addPatient(Patient patient) throws Exception {
-		
 		patientDao.addPatient(patient);
 	}
 
@@ -43,10 +42,9 @@ public class PatientServiceImpl implements PatientService {
 		return patientDao.findPatient(idpatient);
 	}
 
-	@Override
-	public List<Patient> findAllPatients() throws Exception {
+	public List<Patient> listOfPatients() throws Exception {
 		// TODO Auto-generated method stub
-		return patientDao.findAllPatients();
+		return patientDao.listOfPatients();
 	}
 
 }

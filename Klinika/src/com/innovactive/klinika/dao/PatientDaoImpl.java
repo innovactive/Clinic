@@ -26,9 +26,8 @@ public class PatientDaoImpl implements PatientDao{
 	}
 
 	@Override
-	public boolean deletePatient(Patient patient) throws Exception{
-		sessionFactory.getCurrentSession().createQuery("DELETE FROM Patient WHERE idpatient"+patient.getPatientId()).executeUpdate();
-		return true;
+	public void deletePatient(Patient patient) throws Exception{
+		sessionFactory.getCurrentSession().createQuery("DELETE FROM Patient WHERE idpatient = "+patient.getPatientId()).executeUpdate();
 	}
 
 	@Override
@@ -38,9 +37,8 @@ public class PatientDaoImpl implements PatientDao{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Patient> findAllPatients() throws Exception{
+	public List<Patient> listOfPatients() throws Exception{
 		return (List<Patient>) sessionFactory.getCurrentSession().createCriteria(Patient.class).list();
-
 	}
 
 	

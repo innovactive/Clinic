@@ -10,6 +10,6 @@ public interface PatientService {
 	public boolean updatePatient(Patient patient) throws Exception;
 	public boolean deletePatient(Patient patient) throws Exception;
 	public Patient findPatient(int idpatient) throws Exception;
-	public List<Patient> findAllPatients() throws Exception;
+	public List<Patient> listOfPatients() throws Exception;
 
 }
