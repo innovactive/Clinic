@@ -66,7 +66,7 @@ public class PatientController {
 		Map<String, Object> model = new HashMap<String, Object>();
 		model.put("patient", preparePatientBean(patientService.findPatient(patientBean.getIdpatient())));
 		model.put("patients",  prepareListOfPatientsBeen(patientService.listOfPatients()));
-		return new ModelAndView("addEmployee", model);
+		return new ModelAndView("addPatient", model);
 	}
 
 
