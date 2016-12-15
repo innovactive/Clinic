@@ -65,7 +65,7 @@ public class PatientController {
 	public ModelAndView deletePatient(@ModelAttribute("command") PatientBean patientBean) throws Exception {
 		Map<String, Object> model = new HashMap<String, Object>();
 		model.put("patient", preparePatientBean(patientService.findPatient(patientBean.getIdpatient())));
-		model.put("patients",  prepareListOfPatientsBeen(patientService.listOfPatients()));
+		model.put("patients", prepareListOfPatientsBeen(patientService.listOfPatients()));
 		return new ModelAndView("addPatient", model);
 	}
 
